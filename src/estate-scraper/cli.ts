@@ -169,6 +169,16 @@ Environment Variables:
 
   } catch (error) {
     console.error('\n❌ Error:', error instanceof Error ? error.message : error);
+
+    if (error instanceof Error && error.message.includes('Failed to fetch')) {
+      console.log('\n💡 TIP: This website may use JavaScript to load images dynamically.');
+      console.log('Try one of these alternatives:\n');
+      console.log('1. Manually download images and use:');
+      console.log('   yarn build && node dist/estate-scraper/analyze-local.js <image-folder>\n');
+      console.log('2. See the manual extraction guide:');
+      console.log('   src/estate-scraper/manual-guide.md\n');
+    }
+
     process.exit(1);
   }
 }

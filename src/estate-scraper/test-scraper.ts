@@ -2,7 +2,7 @@ import { scrapeEstateSale } from './scraper';
 import { downloadImages } from './downloader';
 
 async function testScraper() {
-  const testUrl = 'https://www.estatesales.net/CA/Redondo-Beach/90278/4774413';
+  const testUrl = 'https://www.estatesales.net/CA/Yorba-Linda/92887/4773582';
 
   console.log('Testing Estate Sale Scraper');
   console.log('===========================\n');
